@@ -13,6 +13,7 @@ public class TestBase {
 	@Before
 	public void openBrowser(){
 		String pathToDriver = System.getProperty("user.dir")+ "\\drivers\\chromedriver.exe"; //drivers and chromedriver is the same for everyone
+		//System.out.println(pathToDriver);
 		System.setProperty("webdriver.chrome.driver", pathToDriver);
 		driver = new ChromeDriver();
 		driver.get("https://www.schoology.com/");
