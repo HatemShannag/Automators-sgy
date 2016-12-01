@@ -19,8 +19,8 @@ public class TestBase {
 		driver.get("https://www.schoology.com/");
 		
 	}
-	@After
-	public void closeBrowser(){
-		driver.close();
-	}
+//	@After
+//	public void closeBrowser(){
+//		driver.close();
+//	}
 }

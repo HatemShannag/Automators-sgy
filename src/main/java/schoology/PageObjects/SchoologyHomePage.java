@@ -15,8 +15,10 @@ public class SchoologyHomePage {
 	WebDriver driver;
 	public static final By CORPORATE_LOC = 	By.id("corporate-body-home");
 	public static final By RESOURCES_TAB_LOC = By.id("resources-header");
-	public static final By SIGN_UP_BUTTON_LOC = By.id("signup-header");
-	public static final By LOG_IN_BUTTON_LOC = By.id("login-header");
+	public static final By SIGN_UP_TAB_LOC = By.id("signup-header");
+	public static final By LOG_IN_TAB_LOC = By.id("login-header");
+	public static final By BLOG_TAB_LOC = By.id("blog-header");
+	public static final By ABOUT_TAB_LOC = By.id("about-header");
 		
 	public SchoologyHomePage (WebDriver driver){
 	this.driver = driver;
@@ -24,13 +26,19 @@ public class SchoologyHomePage {
 	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	Assert.assertTrue(checkAssert());
 	}
+	
+	public BlogPage clickBlog(){
+		driver.findElement(BLOG_TAB_LOC).click();
+		return new BlogPage(driver);
+	}
+	
 	public LoginPage clickLogIn(){
-		driver.findElement(LOG_IN_BUTTON_LOC).click();
+		driver.findElement(LOG_IN_TAB_LOC).click();
 		return new LoginPage(driver);
 	}
 	
 	public RegisterPage clickSignUp(){
-		driver.findElement(SIGN_UP_BUTTON_LOC).click();
+		driver.findElement(SIGN_UP_TAB_LOC).click();
 		return new RegisterPage(driver);
 	}
 	

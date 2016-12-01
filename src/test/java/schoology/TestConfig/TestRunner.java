@@ -9,7 +9,7 @@ package schoology.TestConfig;
 	@CucumberOptions(
 				features = "schoology-UserStories", //name of the folder, where are you feature files located
 				glue = {"schoology.StepDefinition"}, //where is the step definition going to be
-				tags = {"@User_Story_1,@User_Story_2,@User_Story_5,@User_Story_6"}, //in google.feature you have to place this tag if you want to run it
+				tags = {"@User_Story_3"}, //in google.feature you have to place this tag if you want to run it
 				format = {"pretty", "html:target/cucumber"}
 				)
 	public class TestRunner {
