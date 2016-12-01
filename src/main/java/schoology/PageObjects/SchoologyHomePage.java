@@ -27,6 +27,11 @@ public class SchoologyHomePage {
 	Assert.assertTrue(checkAssert());
 	}
 	
+	public AboutPage clickAbout(){
+		driver.findElement(ABOUT_TAB_LOC).click();
+		return new AboutPage(driver);
+	}
+	
 	public BlogPage clickBlog(){
 		driver.findElement(BLOG_TAB_LOC).click();
 		return new BlogPage(driver);
