@@ -28,24 +28,6 @@ public class BlogPage {
 	public BlogPage clickCommunity(){
 	
 		driver.findElement(By.xpath("//input[@value='121']")).click();
-
-	
-//		WebDriverWait wait = new WebDriverWait(driver,15);
-//		WebElement element = driver.findElement(By.id("edit-category-121"));
-//		String elementVal = driver.findElement(By.id("edit-category-121")).getAttribute("Value");
-//		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-//		
-		
-
-
-		
-	
-		
-		
-
-//		Actions actions = new Actions (driver);
-//		actions.moveToElement((WebElement) COMMUNITY_TAB_LOC).click().perform();
-
 		
 		return this;
 		

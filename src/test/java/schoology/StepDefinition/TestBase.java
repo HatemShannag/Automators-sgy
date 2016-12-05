@@ -17,6 +17,7 @@ public class TestBase {
 		System.setProperty("webdriver.chrome.driver", pathToDriver);
 		driver = new ChromeDriver();
 		driver.get("https://www.schoology.com/");
+		driver.manage().window().maximize();
 		
 	}
 //	@After
