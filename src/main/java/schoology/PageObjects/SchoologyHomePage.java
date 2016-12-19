@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 public class SchoologyHomePage {
 
 	WebDriver driver;
+	public static final By CONNECT_LOC = By.id("connect-header");
 	public static final By CORPORATE_LOC = 	By.id("corporate-body-home");
 	public static final By RESOURCES_TAB_LOC = By.id("resources-header");
 	public static final By SIGN_UP_TAB_LOC = By.id("signup-header");
@@ -25,6 +26,11 @@ public class SchoologyHomePage {
 	
 	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	Assert.assertTrue(checkAssert());
+	}
+	
+	public ConnectPage clickConnect(){
+		driver.findElement(CONNECT_LOC).click();
+		return new ConnectPage(driver);
 	}
 	
 	public AboutPage clickAbout(){
